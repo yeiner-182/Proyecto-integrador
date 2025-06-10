@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="shortcut icon" href="imagenes/online-store.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    
+    
+</head>
+<body>
+
+     <!-- Navbar Principal -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <!-- Logo o nombre del sitio -->
+            <img class="logo" src="imagenes/online-store.png" alt="logo">
+            <a class="navbar-brand" href="Index.html">Mi Tienda Virtual</a>
+            
+            <!-- Botón para dispositivos móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
+                <span class="navbar-toggler-icon"></span><!-- Botón se convierte en tres rayas -->
+            </button>
+            
+            <!-- Elementos del menú -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <!-- Logo o nombre del sitio -->
+            <img class="logo" src="imagenes/online-store.png" alt="logo" >
+            <a class="navbar-brand" href="Index.html">Mi Tienda Virtual</a>
+            
+            <!-- Botón para dispositivos móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
+                <span class="navbar-toggler-icon"></span><!-- Botón se convierte en tres rayas -->
+            </button>
+            
+            <!-- Elementos del menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Index.html">Inicio</a>
+                    </li>
+                    
+                    <!-- Dropdown Categoria -->
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMujer" role="button" data-bs-toggle="dropdown">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Lo Nuevo</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Camisas y Blusas</a></li>
+                            <li><a class="dropdown-item" href="#">Jeans</a></li>
+                            <li><a class="dropdown-item" href="#">Vestidos</a></li>
+                            <li><a class="dropdown-item" href="#">Zapatos</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="logica.html">Logica</a></li>
+                            <li><a class="dropdown-item" href="Basedatos.html">Base de datos</a></li>
+                        </ul>
+                        </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="Promociones.html">Promociones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contactanos.html">Contáctanos</a>
+                    </li>
+                </ul>
+                
+                <!-- Botón de Ingresar alineado a la derecha -->
+                <button class="btn btn-primary" id="btnIngresar">Ingresar</button>
+            </div>
+        </div>
+    </nav>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- carrusel de bootstrap -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500"><!-- data-bs-pause="false" -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="imagenes/Imagencarrusel.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Moda que celebra tu esencia</h5>
+                    <p>En Mi tienda Colombia diseñamos prendas para que brilles con autenticidad.</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <img src="imagenes/quienes somos.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Moda que celebra tu esencia</h5>
+                    <p>En Mi tienda Colombia diseñamos prendas para que brilles con autenticidad.</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <img src="imagenes/Convenios.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tenemos convenios</h5>
+                    <p>Convenios que nos ayuda hacer mas accesibles para ti.</p>
+                </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Quiénes Somos _Más que una marca, una revolución de estilo -->
+        <section class="py-5 my-5">
+            <div class="container">
+                <h2 class="text-center section-title">Más que una marca, una revolución de estilo</h2>
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <p class="lead">Desde 2015, en Mi tiendada Colombia hemos redefinido la moda femenina y masculina con diseños que fusionan tendencia, comodidad y empoderamiento.</p>
+                        <p>Nacimos en Medellín con un propósito claro: crear piezas que te hagan sentir protagonista de tu propia historia, sin sacrificar tu comodidad ni valores.</p>
+                        <p class="fst-italic fw-bold mt-4">"No seguimos modas, las creamos contigo."</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="imagenes/Diseño.jpeg" alt="Estudio de diseño" class="img-fluid rounded img-diseño">
+                    </div>
+                </div>
+                
+                <div class="row mt-5">
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="icon-container mb-3 icono-rosado">
+                            <i class="fas fa-star fa-2x"></i>
+                        </div>
+                        <h4>Diseños exclusivos</h4>
+                        <p>Para cuerpos reales y personalidades únicas</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="icon-container mb-3 icono-azul">
+                            <i class="fas fa-leaf fa-2x"></i>
+                        </div>
+                        <h4>Telas sostenibles</h4>
+                        <p>Materiales de alta calidad y bajo impacto</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="icon-container mb-3 icono-rosado">
+                            <i class="fas fa-hands-helping fa-2x"></i>
+                        </div>
+                        <h4>Asesoría de estilo</h4>
+                        <p>Personalizada para cada ocasión</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Nuestra Filosofía_ Creemos en la moda con propósito -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center section-title">Creemos en la moda con propósito</h2>
+                <p class="text-center lead mb-5">Para nosotros, vestir es un acto de autoexpresión</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="philosophy-card h-100 p-4">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-gem fa-3x mb-3 icono-rosadofilosofia"></i>
+                                <h3>Empoderarte</h3>
+                            </div>
+                            <p>Siluetas que celebran tu cuerpo tal como es, diseñadas para realzar tus mejores atributos y darte la confianza que mereces.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="philosophy-card h-100 p-4">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-lightbulb fa-3x mb-3 icono-azulfilosofia"></i>
+                                <h3>Inspirarte</h3>
+                            </div>
+                            <p>Tendencias globales adaptadas a tu vida cotidiana. Piezas versátiles que se ajustan a tu rutina sin sacrificar estilo.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="philosophy-card h-100 p-4">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-heart fa-3x mb-3 icono-rosadofilosofia"></i>
+                                <h3>Conectarte</h3>
+                            </div>
+                            <p>Una comunidad de mujeres y hombres que brillan con confianza. Eventos exclusivos y contenido que enriquece tu relación con la moda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colecciones Destacadas_ Descubre tu estilo signature -->
+        <section class="py-5 my-5">
+            <div class="container">
+                <h2 class="text-center section-title">Descubre tu estilo signature</h2>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="collection-card">
+                            <img src="imagenes/Descubre tu estilo1.jpeg" alt="Feminidad Radical" class="img-fluid w-100">
+                            <div class="collection-overlay">
+                                <h3>Feminidad Radical</h3>
+                                <p>Prendas con detalles únicos para destacar tu sensualidad</p>
+                                <a href="#" class="btn btn-sm btn-coleccion">Ver colección</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="collection-card">
+                            <img src="imagenes/Descubre tu estilo2.png" alt="Urban Energy" class="img-fluid w-100">
+                            <div class="collection-overlay">
+                                <h3>Urban Energy</h3>
+                                <p>Estilo casual-chic para tu día a día</p>
+                                <a href="#" class="btn btn-sm btn-coleccion">Ver colección</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="collection-card">
+                            <img src="imagenes/Descubre tu estilo3.png" alt="Elegancia Atemporal" class="img-fluid w-100">
+                            <div class="collection-overlay">
+                                <h3>Elegancia Atemporal</h3>
+                                <p>Piezas clásicas con un toque contemporáneo</p>
+                                <a href="#" class="btn btn-sm btn-coleccion">Ver colección</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios _Ellos viven la experiencia-->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center section-title">Ellos viven la experiencia</h2>
+                
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card bg-white p-4 h-100">
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left fa-2x icono-testimonio"></i>
+                            </div>
+                            <p class="mb-4">"¡Por fin encontré jeans que me ajustan perfecto sin sacrificar estilo! Como mujer curvy, es difícil encontrar opciones modernas que realmente me queden bien."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <img src="imagenes/mujer3.jpg" alt="Ana M." class="rounded-circle" width="50">
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Ana M.</h6>
+                                    <small class="text-muted">Bogotá</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card bg-white p-4 h-100">
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left fa-2x icono-testimonio"></i>
+                            </div>
+                            <p class="mb-4">"Me encanta que sus vestidos resaltan mis curvas con elegancia. No son solo prendas, son piezas que me hacen sentir poderosa en cada reunión importante."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <img src="imagenes/mujer2.jpg" alt="María P." class="rounded-circle" width="50">
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">María P.</h6>
+                                    <small class="text-muted">Medellín</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card bg-white p-4 h-100">
+                            <div class="mb-3">
+                                <i class="fas fa-quote-left fa-2x icono-testimonio"></i>
+                            </div>
+                            <p class="mb-4">"La asesoría de estilo cambió por completo mi armario. Aprendí a combinar prendas básicas con piezas statement que realmente reflejan mi personalidad."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <img src="imagenes/mujer3.jpg" alt="Laura G." class="rounded-circle" width="50">
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Laura G.</h6>
+                                    <small class="text-muted">Cali</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compromiso Social _Moda con impacto positivo-->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center section-title">Moda con impacto positivo</h2>
+                <p class="text-center lead mb-5">En cada colección, apoyamos iniciativas que transforman</p>
+                
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="impact-item">
+                            <i class="fas fa-recycle fa-3x mb-3 icono-impactoazul"></i>
+                            <h4>Sostenibilidad</h4>
+                            <p>30% de nuestras prendas usan materiales reciclados y procesos de bajo impacto ambiental.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="impact-item">
+                            <i class="fas fa-hands-helping fa-3x mb-3 icono-impactorosa"></i>
+                            <h4>Mujeres artesanas</h4>
+                            <p>Colaboramos con cooperativas locales de mujeres que preservan técnicas tradicionales.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="impact-item">
+                            <i class="fas fa-seedling fa-3x mb-3 icono-impactoazul"></i>
+                            <h4>Producción ética</h4>
+                            <p>Zero waste en nuestros procesos y condiciones laborales justas en toda nuestra cadena.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter _Únete a la comunidad-->
+        <section class="newsletter-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mb-4">Únete a la comunidad Studio F</h2>
+                        <p class="lead mb-5">Recibe tendencias exclusivas, lanzamientos y un <strong>15% OFF</strong> en tu primera compra.</p>
+                        
+                        <form class="row g-3 justify-content-center">
+                            <div class="col-md-8">
+                                <input type="email" class="form-control form-control-lg" placeholder="Tu correo electrónico">
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-light btn-lg w-100">Suscribirme</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+   
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Logo y descripción -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Tienda Online</h5>
+                    <p>Moda auténtica, protagonista de tu propio estilo.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="Promociones.html">Promociones</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="Contactanos.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Contacto -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt"></i> Carrera 42 #48-20, Medellin</li>
+                        <li><i class="bi bi-telephone"></i> +57 312 231 66 03</li>
+                        <li><i class="bi bi-envelope"></i>Ydominguez@cesde.net</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Newsletter -->
+                <div class="col-md-3">
+                    <h5>Informate</h5>
+                    <p>Suscríbete para recibir nuestras novedades.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Tu email">
+                        <button class="btn btn-warning" type="button">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright text-center py-3">
+            <div class="container">
+                <small>&copy; 2025  🧑‍🎓Yeiner Dominguez. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+   
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Vincula el script -->
+    <script src="scripts.js"></script>
+</body>
+</html>

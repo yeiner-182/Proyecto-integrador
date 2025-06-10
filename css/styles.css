@@ -1,0 +1,396 @@
+/*Navbar Principal*/
+
+.logo{
+    margin: 5px;
+    width: 22px;
+}
+
+.navbar-nav{
+    margin-right: auto;
+}
+
+.btn-primary {
+    padding: 10px;
+}
+
+
+
+/* Personalización dropdowns */
+.dropdown-menu {
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+.dropdown-item:hover {
+    background-color: #0d6efd;
+    color: #ffffff; /* Color de marca (ajusta según tu paleta) */
+}
+
+
+
+/* CSS para acelerar la animación carrusel*/
+/* Acelera la animación y mejora la fluidez */
+.carousel-inner {
+ transition: transform 0.6s ease-in-out !important; /* Más rápido que el default (0.9s) */
+}
+/* Opcional: Elimina el efecto de "pausa" al pasar el mouse */
+.carousel:hover {
+animation-play-state: running !important;
+}
+
+
+/*Quienes somos Imagen ---> Más que una marca, una revolución de estilo*/
+.img-diseño{
+    max-height: 320px;
+}
+   /*titulo*/
+.section-title {
+position: relative;
+margin-bottom: 50px;
+font-weight: 700;
+color: var(--azul-baner);
+}
+
+
+   /*subraya del titulo*/
+.section-title:after {
+content: '';
+position: absolute;
+bottom: -15px;
+left: 50%;
+transform: translateX(-50%);
+width: 80px;
+height: 3px;
+background: var(--rosa-baner);
+}
+.icono-rosado{
+background-color: rgba(232, 62, 140, 0.4); 
+color: var(--rosa-baner);
+}
+.icono-azul{
+background-color: rgba(26, 35, 126, 0.5); 
+color: var(--azul-baner);
+}
+
+
+
+ /*cards  de la filosofia ----> Creemos en la moda con propósito*/
+.philosophy-card {
+border: none;
+border-radius: 10px;
+overflow: hidden;
+transition: all 0.3s;
+background-color:rgba(248, 230, 239,0.2);
+}
+        
+.philosophy-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.icono-rosadofilosofia{
+color: var(--rosa-baner);
+}
+.icono-azulfilosofia{
+color: var(--azul-baner);
+}
+
+
+
+/*Cards Colecciones Destacadas ----> Descubre tu estilo signature*/
+.collection-card {
+position: relative;
+overflow: hidden;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+.collection-card img {
+transition: transform 0.5s;
+}
+.collection-card:hover img {
+transform: scale(1.05);
+}
+
+.collection-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+color: white;
+padding: 20px;
+}
+
+
+/* botones en el card de coleccion*/
+.btn-coleccion {
+background-color: var(--rosa-baner);
+color: white;
+padding: 12px 30px;
+border-radius: 30px;
+font-weight: 600;
+border: none;
+}
+        
+.btn-coleccion:hover {
+background-color: #d63384;
+color: white;
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+ 
+/* Seccion de Testimonios -----> Ellos viven la experiencia */
+.icono-testimonio{
+color: var(--text-rosa);
+}
+.testimonial-card {
+border-left: 3px solid var(--rosa-baner);
+}
+
+
+/* Seccion de Testimonios -----> Moda con impacto positivo */
+.icono-impactoazul{
+    color: var(--azul-baner);
+}
+.icono-impactorosa{
+    color: var(--rosa-baner);
+}
+.impact-item {
+text-align: center;
+padding: 30px 20px;
+border-radius: 10px;
+transition: all 0.3s;
+}   
+.impact-item:hover {
+background-color: white;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+
+/* Newsletter -----> Únete a la comunidad */
+        
+.newsletter-section {
+background: linear-gradient(135deg, var(--rosa-baner), var(--azul-baner));
+color: white;
+}*
+
+
+
+/*pie de pagina*/
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0;
+}
+.footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #f39c12;
+}
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.copyright {
+    background-color: #1a252f;
+    padding: 15px 0;
+ }
+
+
+
+/* Banner Principal promociones -------> sitio de promociones e83e8c*/
+
+:root {
+--rosa-baner: #e83e8c;
+--azul-baner: #1a237e; 
+--text-rosa: #e83e8c; /* Define el color rosa */
+}
+        
+body {
+ font-family: 'Segoe UI', sans-serif;
+ padding-top: 65px;
+ }
+    /* Banner */
+.promo-banner {
+background: linear-gradient(135deg, var(--rosa-baner), var(--azul-baner));
+color: white;
+border-radius: 8px;
+overflow: hidden;
+}
+     /* Card */
+.producto-card {
+transition: transform 0.3s;
+border: none;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+        
+.producto-card:hover {
+transform: translateY(-10px);
+}
+    /* icon text rosa */
+.text-pink{
+color: var(--text-rosa);
+}
+
+
+/* Banner Principal contactos -------> sitio de promociones */
+.contact-header {
+background: linear-gradient(135deg, var(--rosa-baner), var(--azul-baner));
+color: white;
+padding: 60px 0;
+margin-bottom: 50px;
+}
+
+/* cards de iconos */
+.contact-card {
+border: none;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+}
+        
+.contact-card:hover {
+transform: translateY(-5px);
+}
+
+.icon-container {
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.icono-redondo {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+margin: 0 auto 20px;
+
+}
+
+.bg-pink {
+background-color: rgba(232, 62, 140, 0.1);
+color: var(--rosa-baner);
+}
+        
+.bg-blue {
+background-color: rgba(26, 35, 126, 0.1);
+color: var(--azul-baner);
+}
+
+
+
+
+
+/* Formulario  -------> inicio de sesion */
+.login-container {
+max-width: 400px;
+width: 100%;
+margin: 0 auto;
+background: white;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+overflow: hidden;
+}
+        
+.login-header {
+background: linear-gradient(135deg, var(--rosa-baner), var(--azul-baner));
+color: white;
+padding: 25px;
+text-align: center;
+}
+        
+.login-body {
+padding: 30px;
+}
+        
+.form-control:focus {
+border-color: var(--rosa-baner);
+box-shadow: 0 0 0 0.25rem rgba(232, 62, 140, 0.25);
+}
+        
+.btn-login {
+background-color: var(--rosa-baner);
+color: white;
+border: none;
+padding: 10px;
+font-weight: 600;
+transition: all 0.3s;
+}
+        
+.btn-login:hover {
+background-color: #d63384;
+transform: translateY(-2px);
+}
+        
+.social-login .btn {
+border-radius: 50px;
+font-weight: 500;
+}
+        
+.divider {
+position: relative;
+text-align: center;
+margin: 20px 0;
+}
+        
+.divider:before {
+content: "";
+position: absolute;
+top: 50%;
+left: 0;
+right: 0;
+height: 1px;
+background: #eee;
+z-index: 1;
+}
+
+.divider span {
+position: relative;
+z-index: 2;
+background: white;
+padding: 0 15px;
+color: #777;
+}
+
+/* Formulario  -------> Registro */
+  .registration-card {
+max-width: 800px;
+margin: 2rem auto;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+overflow: hidden;
+}
+
+.registration-header {
+background: linear-gradient(135deg, var(--rosa-baner), var(--azul-baner));
+color: white;
+padding: 1.5rem;
+text-align: center;
+}
+
+.registration-body {
+padding: 2rem;
+background: white;
+}
+  
+
+/* botton Registro */
+.btn-register {
+background-color: var(--rosa-baner);
+color: white;
+border: none;
+padding: 0.5rem 1.5rem;
+font-weight: 600;
+}
+        
+.btn-register:hover {
+background-color: #d63384;
+}
+
+.textrosa{
+    color: var(--text-rosa);
+    text-decoration: none;
+}
