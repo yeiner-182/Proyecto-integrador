@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>logica</title>
     <link rel="shortcut icon" href="imagenes/online-store.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -64,7 +64,106 @@
 
     <!-- Contenido Principal -->
     <main>
-      
+        <div class="container py-5">
+            <h1 class="text-center mb-4">Explicación del ciclo <code>while</code> en Java</h1>
+
+            <div class="mb-4">
+                <h3>¿Qué es el ciclo <code>while</code>?</h3>
+                <p>El ciclo <strong>while</strong> es una estructura de control que repite un bloque de instrucciones mientras una condición sea verdadera.</p>
+            </div>
+
+            <div class="mb-4">
+                <h3>Estructura</h3>
+                <div class="code-block">
+                    <pre><code>while (condición) {
+                        // Código a ejecutar
+                    }</code></pre>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h3>Ejemplo básico</h3>
+                <div class="code-block">
+                    <pre><code>int contador = 1;
+
+                    while (contador <= 5) {
+                        System.out.println("Contador: " + contador);
+                        contador++;
+                    }</code></pre>
+                </div>
+                    <p>Este código imprime los números del 1 al 5.</p>
+            </div>
+
+            <div class="mb-4">
+                <h3>¡Cuidado con los ciclos infinitos!</h3>
+                <div class="code-block">
+                    <pre><code>// Este código generará un ciclo infinito
+                    int contador = 1;
+
+                    while (contador <= 5) {
+                        System.out.println("Contador: " + contador);
+                        // contador++ está ausente
+                    }</code></pre>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h3>Comparación <code>while</code> vs <code>do-while</code></h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>while</th>
+                            <th>do-while</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Evaluación de la condición</td>
+                            <td>Antes de ejecutar</td>
+                            <td>Después de ejecutar</td>
+                        </tr>
+                        <tr>
+                            <td>Ejecución mínima</td>
+                            <td>0 veces</td>
+                            <td>1 vez</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mb-4">
+                <h3>Ejemplo práctico: menú</h3>
+                <div class="code-block">
+                    <pre><code>Scanner scanner = new Scanner(System.in);
+                    int opcion = 0;
+
+                    while (opcion != 4) {
+                        System.out.println("1. Ver productos\n2. Comprar\n3. Ayuda\n4. Salir");
+                        opcion = scanner.nextInt();
+
+                        switch (opcion) {
+                            case 1 -> System.out.println("Mostrando productos...");
+                            case 2 -> System.out.println("Proceso de compra...");
+                            case 3 -> System.out.println("Centro de ayuda...");
+                            case 4 -> System.out.println("Saliendo del sistema.");
+                            default -> System.out.println("Opción inválida.");
+                        }
+                    }
+                    scanner.close();</code></pre>
+                </div>
+            </div>
+
+            <h2>Visualización del código</h2>
+            <p>Puedes visualizar el código en la siguiente imagen:</p>
+            <a href="imagenes/Ejemplo While.jpg" target="_blank">
+            <img class="imglogica" src="imagenes/Ejemplo While.jpg" alt="Código ejemplo ciclo while en Java">
+            </a>
+
+            <div class="alert alert-success">
+                <strong>Resumen:</strong> El ciclo <code>while</code> en Java ejecuta un bloque de código mientras la condición sea verdadera. Es muy útil cuando no se sabe cuántas veces se repetirá el proceso.
+            </div>
+        </div>
     </main>
    
     <footer class="footer">
