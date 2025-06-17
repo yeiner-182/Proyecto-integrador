@@ -70,9 +70,117 @@
             <img class="imglogica" src="imagenes/Base de Datos para Tienda Virtual con Módulos y Roles.png" alt="imagen diagrama">
             </a>
 
+         <div class="container py-5">
+            <h1 class="text-center mb-4">Explicación de la Conexion DB en <code>Java</code> desde netbeans</h1>
+
+            <div class="mb-4">
+                <h3 class="text-center">¿Como se realizo la Conexion con  <code>Java</code>?</h3>
+                <p>Se realizó mediante <strong>JDBC</strong> (Java Database Connectivity) con estos pasos clave: se creo un Proyecto en netbeans (Java with Maven) se instalo la dependencia <code>mssql-jdbc</code>,
+                luego se creo la clase de conexion con el metodo de <code>establecerConexion</code>, en la clase principal se instancio la conexion y se creo el objeto, por ultimo si al dar error el puerto se configura la reglas del corta fuego.</p>
+            </div>  
+        </div>
+        <!-- Contenido Principal del codigo  -->
+        <div class="container">
+                <h3>Clase Conexion</h3>
+                <div class="code-block">
+                    <pre><code>          
+    package com.mycompany.javasqlserver;
+                //IMPORTACIONES NECESARIAS
+                import java.sql.Connection;      // Para manejar la conexión a la BD
+                import java.sql.DriverManager;  // Para gestionar el driver de conexión
+                import javax.swing.JOptionPane; // Para mostrar mensajes de diálogo
+
+                //CLASE PRINCIPAL DE CONEXIÓN
+                public class CConexion {
+                    
+                    //VARIABLE QUE ALMACENARÁ LA CONEXIÓN (inicialmente null)
+                    Connection conectar = null;
+                    
+                    // DATOS DE CONEXIÓN A SQL SERVER
+                    String usuario = "sa";         // Usuario por defecto de SQL Server (usuario principal, no se recomienda)
+                    String contrasena = "123456";  // Contraseña del usuario
+                    String db = "cesde_med";       // Nombre de la base de datos
+                    String ip = "localhost";       // IP del servidor (localhost = misma máquina)
+                    String puerto = "1433";        // Puerto por defecto de SQL Server, crear regla y activar en el SQLSERVER
+
+                    // MÉTODO DELA CLASE PARA ESTABLECER LA CONEXIÓN
+                    public Connection establecerConexion() {
+                        try {
+                            // CADENA DE CONEXIÓN JDBC (forma correcta)
+                            String cadena = "jdbc:sqlserver://" + ip + ":" + puerto + 
+                                        ";databaseName=" + db +      // Nombre de la BD
+                                        ";user=" + usuario +        // Usuario
+                                        ";password=" + contrasena + // Contraseña
+                                        ";encrypt=true;trustServerCertificate=true"; // Configuración de seguridad
+
+                            // REGISTRO DEL DRIVER (obligatorio en versiones antiguas de Java)
+                            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+                            
+                            // ESTABLECER LA CONEXIÓN CON LA CADENA
+                            conectar = DriverManager.getConnection(cadena);
+                            
+                            // MENSAJE DE ÉXITO (si llega aquí, la conexión funcionó)
+                            JOptionPane.showMessageDialog(null, "¡Conexión exitosa a la base de datos!");
+
+                        } catch (Exception e) {
+                            // MANEJO DE ERRORES (si algo falla)
+                            JOptionPane.showMessageDialog(null, 
+                                "Error al conectar: " + e.getMessage(), // Mensaje de error
+                                "Error",                               // Título del diálogo
+                                JOptionPane.ERROR_MESSAGE);            // Icono de error
+                            
+                            // IMPRIMIR ERROR EN CONSOLA (para depuración)
+                            e.printStackTrace();
+                        }
+                        
+                        //RETORNAR LA CONEXIÓN (éxito o null si falló)
+                        return conectar;
+                    }                
+               }</code></pre>
+                </div>
+        </div>
+        <div class="container">
+                <h3>Clase Principal</h3>
+                <div class="code-block">
+                    <pre><code>package com.mycompany.javasqlserver;
+
+                    public class JavaSqlServer {
+
+                        public static void main(String[] args) {
+                            //instanciar clase
+                            CConexion conexion=new CConexion();
+                            //crear objeto para llamar la conexion
+                            conexion.establecerConexion();
+                            
+                            System.out.println("Hello World!");
+                            
+                            
+                        }
+                    }</code></pre>
+                </div>
+        </div>
+
+
+        <!-- Contenido de las imagenes -->
+         <div class="container">
+            <hr>
+            <h2>Visualización del código</h2>
+                <p>Puedes visualizar el código en la siguiente imagen:</p>
+                <a href="imagenes/Ejemplo While.jpg" target="_blank">
+                <img class="imglogica" src="imagenes/Ejemplo While.jpg" alt="Código ejemplo ciclo while en Java">
+                </a>
+            <hr>
+            <h2>Visualización del código</h2>
+                <p>Puedes visualizar el código en la siguiente imagen:</p>
+                <a href="imagenes/Ejemplo conexion.jpg" target="_blank">
+                <img class="imglogica" src="imagenes/Ejemplo conexion exitosa.jpg" alt="Código ejemplo ciclo while en Java">
+                </a>
+            <hr>
+        </div>    
         <div class="alert alert-success">
             <strong>Resumen:</strong> SQL Server Management Studio (SSMS) es una herramienta de Microsoft que permite gestionar y administrar <code>Microsoft SQL Server.</code> Es un entorno de desarrollo integrado (IDE).
-        </div>     
+        </div>
+
     </main>
    
     <footer class="footer">
