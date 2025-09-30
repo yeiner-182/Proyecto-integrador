@@ -30,5 +30,3 @@ document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60
 
 setInterval(updateCountdown, 1000);
 updateCountdown();// Llama a la función
-
-

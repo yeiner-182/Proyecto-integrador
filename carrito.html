@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Mi Tienda Virtual</title>
+    <link rel="shortcut icon" href="imagenes/online-store.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <!-- Navbar Principal -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <!-- Logo o nombre del sitio -->
+            <img class="logo" src="imagenes/online-store.png" alt="logo" >
+            <a class="navbar-brand" href="Index.html">Mi Tienda Virtual</a>
+            
+            <!-- Botón para dispositivos móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
+                <span class="navbar-toggler-icon"></span><!-- Botón se convierte en tres rayas -->
+            </button>
+            
+            <!-- Elementos del menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Index.html">Inicio</a>
+                    </li>
+
+                    <!-- Dropdown Categoria -->
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMujer" role="button" data-bs-toggle="dropdown">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Lo Nuevo</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Camisas y Blusas</a></li>
+                            <li><a class="dropdown-item" href="#">Jeans</a></li>
+                            <li><a class="dropdown-item" href="#">Vestidos</a></li>
+                            <li><a class="dropdown-item" href="#">Zapatos</a></li>
+                        </ul>
+                        </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="Promociones.html">Promociones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contactanos.html">Contáctanos</a>
+                    </li>
+                </ul>
+                
+                <!-- Botón de Ingresar alineado a la derecha -->
+                <div class="d-flex align-items-center">
+                <!-- Icono de carrito con badge -->
+                <div class="position-relative me-3">
+                    <a href="carrito.html" class="btn btn-outline-dark position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="carritoBadge">0</span>
+                    </a>
+                </div>
+                
+                <!-- Icono de usuario / login -->
+                <div class="dropdown">
+                    <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button" id="dropdownUser" data-bs-toggle="dropdown">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" id="userDropdown">
+                        <li><a class="dropdown-item" href="login.html" id="loginLink">Iniciar Sesión</a></li>
+                        <li><a class="dropdown-item" href="registro.html" id="registerLink">Registrarse</a></li>
+                        <li><hr class="dropdown-divider" id="userDivider" style="display: none;"></li>
+                        <li><a class="dropdown-item" href="#" id="profileLink" style="display: none;">Mi Perfil</a></li>
+                        <li><a class="dropdown-item" href="#" id="logoutLink" style="display: none;">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-5 pt-5">
+        <h1 class="text-center mb-4">Carrito de Compras</h1>
+        
+        <div id="carritoVacio" class="text-center py-5" style="display: none;">
+            <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+            <h3 class="text-muted">Tu carrito está vacío</h3>
+            <p class="text-muted">Agrega algunos productos para continuar</p>
+            <a href="index.html" class="btn btn-primary">Seguir Comprando</a>
+        </div>
+        
+        <div id="carritoConProductos" style="display: none;">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Productos en el Carrito</h5>
+                        </div>
+                        <div class="card-body" id="listaProductosCarrito">
+                            <!-- Productos del carrito -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Resumen de Compra</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$0</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Envío:</span>
+                                <span id="envio">$0</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-3">
+                                <strong>Total:</strong>
+                                <strong id="totalCarrito">$0</strong>
+                            </div>
+                            <button class="btn btn-primary w-100" id="btnConfirmarCompra">Confirmar Compra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer (igual que en index.html) -->
+    
+    <script src="js/sistema-tienda.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>

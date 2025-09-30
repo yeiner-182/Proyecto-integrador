@@ -411,3 +411,41 @@ max-width: 100%;
 height: auto;
 margin-top: 1rem;
 }
+
+
+
+
+/* Estilos para el sistema de carrito */
+.producto-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+#carritoBadge {
+    font-size: 0.7rem;
+}
+
+.input-group.input-group-sm {
+    width: 120px;
+}
+
+.alert-mensaje {
+    border-radius: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .producto-card .card-body {
+        padding: 1rem;
+    }
+    
+    .input-group.input-group-sm {
+        width: 100px;
+    }
+}
